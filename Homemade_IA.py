@@ -1,4 +1,5 @@
 # Learning the XOR table with machine learning
+# This model is an adaptation of one model of https://github.com/fernandofeltrin
 import numpy as np
 
 entradas = np.array([[0,0], [0,1], [1,0], [1,1]]) # Values to be fed, each line
