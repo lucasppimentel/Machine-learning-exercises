@@ -1,0 +1,32 @@
+define user ask_about_petroleo_news
+  "O que aconteceu com o preço do petróleo?"
+  "Como está o mercado de energia?"
+  "Houve alguma decisão da OPEP?"
+  "Notícias sobre produção de petróleo"
+  "Quais eventos afetam as ações da Petrobrás?"
+  "Qual foi o valor da ação na bolsa de valores?"
+  "Qual foi o preço das ações da Petrobras ontem?"
+
+define user ask_out_of_scope
+  "Qual a sua opinião sobre política?"
+  "Fale sobre eleições nos EUA"
+  "Você acredita em Deus?"
+  "Conte uma piada"
+  "Quem vai ganhar o Brasileirão?"
+  "Quantos 'r' tem em 'strawberry"?
+
+
+define flow out of scope
+    user ask_out_of_scope
+    bot say "Não posso responder, pois sou apenas um especialista na Petrobrás"
+
+define flow 
+    user ask_about_petroleo_news
+    bot say "Claro, aqui estão as informações:"
+
+define flow
+    user fallback
+    bot say "Não posso responder, pois sou apenas um especialista na Petrobrás"
+
+define bot refuse to respond
+  "Me utilize apenas como uma ferramenta para obter informações relevantes para a Petrobrás. Não posso responder essa pergunta."
